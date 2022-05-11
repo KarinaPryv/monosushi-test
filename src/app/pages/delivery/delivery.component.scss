@@ -1,0 +1,57 @@
+@import '../../shared/styles/mixins';
+@import '../../shared/styles/variables';
+
+.delivery-info-img {
+    margin-right: 10px;
+    max-width: 275px;
+    img {
+        width: 100%;
+    }
+}
+
+.delivery-info-text {
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.delivery-info-title {
+    margin-bottom: 10px;
+    font-size: 26px;
+    letter-spacing: 3px;
+}
+
+.color-green {
+    color: #27ae60;
+}
+
+.color-yellow {
+    color: #f2c94c;
+}
+
+ p {
+    color: $text-secondary-color;
+ }
+
+.title-payment {
+    h2 {
+        border-top: none;
+    }
+} 
+
+.pay-info-img {
+    max-width: 63px;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background: $main-color;
+    margin-right: 20px;
+    @include flex-center;
+}
+
+.delivery-text-block {
+    margin-top: 60px;
+}
+
+.pay-text-block {
+    margin: 60px 0;
+}

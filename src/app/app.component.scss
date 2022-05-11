@@ -1,0 +1,11 @@
+main {
+    min-height: calc(100vh - 266px);
+    margin-top: 95px;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        min-height: calc(100vh - 286px);
+        margin-top: 60px;
+    }
+}

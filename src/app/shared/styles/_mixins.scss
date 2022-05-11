@@ -1,0 +1,10 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border-animation($dimension, $easing ,$pipe ) {
+    transition: 100ms  $dimension $easing border-pipeline(100ms,$pipe);
+    -web-kit-transition: 100ms  $dimension $easing border-pipeline(100ms,$pipe);
+}

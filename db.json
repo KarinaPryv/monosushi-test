@@ -1,0 +1,31 @@
+{
+  "discounts": [
+    {
+      "name": "Кожен п'ятий рол в подарунок",
+      "title": "4+1=4",
+      "description": "Замовляйте 5 ролів, а платіть за 4.\nЗамовляйте 10 ролів, а платіть за 8 і так далі.\nБезкоштовним вважається рол з найменшою вартістю.\nЦя акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2F5-j-v-podarunok.png?alt=media&token=089fe1ec-ce2b-4875-b2fb-3cb4da967e25",
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "name": "Роли",
+      "path": "roli",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=0642f5f5-19a1-4d27-b19d-0f7ed16577aa",
+      "id": 1
+    },
+    {
+      "name": "Акції",
+      "path": "discounts",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-gift.svg?alt=media&token=583f673d-d824-4744-b79f-4cf360b38792",
+      "id": 2
+    },
+    {
+      "name": "Сети",
+      "path": "setu",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-sets.svg?alt=media&token=b4b29ec2-c12e-492d-bfaf-5c2f041dd816",
+      "id": 3
+    }
+  ]
+}

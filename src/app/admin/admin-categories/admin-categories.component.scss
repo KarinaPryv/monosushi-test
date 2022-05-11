@@ -1,0 +1,19 @@
+@import '../admin-discounts/admin-discounts.component.scss';
+
+.categories-table {
+    th {
+        width: 20%;
+    }
+}
+
+tr {
+    vertical-align: middle;
+}
+
+.upload-image {
+    padding: 10px;
+}
+
+.category-img {
+    width: 60px;
+}

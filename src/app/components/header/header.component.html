@@ -1,0 +1,83 @@
+<header class="d-flex justify-content-between">
+    <a [routerLink]="[ '' ]" class="header-logo">
+        <img src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt="">
+    </a>
+        <ul class="category-nav align-items-center justify-content-between">
+            <li class="category-item border-inner">
+                <a [routerLink]="[ '/discounts' ]" class="d-flex flex-column align-items-center">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-gift.svg" alt="">
+                    <span class="fw-bold">Акції</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a [routerLink]="[ '/product-category/roli' ]" class="d-flex flex-column align-items-center">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-rolls.svg" alt="">
+                    <span class="fw-bold">Роли</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a [routerLink]="[ '/product-category/setu' ]" class="d-flex flex-column align-items-center">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-sets.svg" alt="">
+                    <span class="fw-bold">Сети</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a [routerLink]="[ '/product-category/napoyi' ]" class="d-flex flex-column align-items-center">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-drinks.svg" alt="">
+                    <span class="fw-bold">Напої</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a [routerLink]="[ '/product-category/sousi' ]" class="d-flex flex-column align-items-center">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2021/09/icon.svg" alt="">
+                    <span class="fw-bold">Соуси</span>
+                </a>
+            </li>
+        </ul>
+        <div class="burger-menu">
+            <svg class="ham hamRotate ham4" viewBox="0 0 100 100"
+                onclick="document.querySelector('.burger-menu').classList.toggle('active')">
+                <path class="line top"
+                    d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                <path class="line middle" d="m 70,50 h -40" />
+                <path class="line bottom"
+                    d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+            </svg>
+            <ul class="secondary-nav">
+                <li class="menu-item" onclick="document.querySelector('.burger-menu').classList.toggle('active')">
+                    <a [routerLink]="[ '/delivery' ]">Доставка та оплата</a>
+                </li>
+                <li class="menu-item" onclick="document.querySelector('.burger-menu').classList.toggle('active')">
+                    <a [routerLink]="[ '/about-us' ]">Про нас</a>
+                </li>
+                <li class="menu-item" onclick="document.querySelector('.burger-menu').classList.toggle('active')">
+                    <a [routerLink]="[ '/discounts' ]">Акції</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-callback">
+            <button>
+                <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/phone.svg" alt="">
+                <span class="fw-bold">МИ ЗАТЕЛЕФОНУЄМО</span>
+            </button>
+        </div>
+        <div class="header-info">
+            <a href="#" class="fw-bold phone-num">(097) 878 08 37</a>
+            <p>Працюємо з <span class="fw-bold">11:00</span> до <span class="fw-bold">21:30</span></p>
+        </div>
+        <div class="header-user">
+            <a [routerLink]="[ '/admin' ]">
+                <img src="https://monosushi.com.ua/wp-content/themes/monosushi/img/user.svg" alt="">
+            </a>
+        </div>
+    <div class="header-basket">
+        <a href="#">
+            <img src="https://monosushi.com.ua/wp-content/themes/monosushi/img/basket.svg" alt="">
+            <span>0</span>
+        </a>
+        <div class="price">
+            <b>0</b>
+            <span>грн</span>
+        </div>
+    </div>
+</header>

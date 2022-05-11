@@ -1,0 +1,124 @@
+@import '../../shared/styles/variables';
+
+.title {
+    padding-bottom: 40px;
+}
+
+section {
+    margin-bottom: 90px;
+}
+
+h3 {
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-size: 34px;
+}
+
+.info-block {
+    p {
+        font-size: 18px;
+        color: $text-secondary-color;
+    }
+
+    li {
+        position: relative;
+        font-size: 18px;
+        line-height: 1.47em;
+        padding-left: 24px;
+        color: $text-secondary-color;
+
+        &::before {
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            left: 0;
+            top: 9px;
+            border-radius: 100%;
+            background: #b5d8f7;
+            content: "";
+        }
+
+        &::after {
+            width: 9px;
+            height: 9px;
+            position: absolute;
+            left: 1px;
+            top: 10px;
+            border-radius: 100%;
+            border: 2px solid #fff;
+            content: "";
+        }
+    }
+}
+
+.img-block {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+
+    img {
+        width: 100%;
+    }
+}
+
+.accordion-button {
+    padding: 22px 0px 27px 0;
+    margin: 0;
+    color: $text-secondary-color !important;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:not(.collapsed) {
+        color: $text-primary-color !important;
+        background-color: transparent;
+        box-shadow: none;
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+        }
+    }
+
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 23px;
+    }
+}
+
+.accordion-item {
+    border-bottom: 1px solid #dcdcdc !important;
+}
+
+.accordion-inner {
+    padding: 0;
+
+    p, li {
+        color: $text-secondary-color;
+    }
+
+    ol {
+        counter-reset: number;
+    }
+
+    li {
+        padding-left: 34px;
+        position: relative;
+
+        &::before {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 6px;
+            counter-increment: number;
+            content: "0" counter(number);
+            font-size: 12px;
+            line-height: 1.47em;
+            color: $text-primary-color;
+            font-family: RotundaBold;
+            margin-right: 17px;
+        }
+    }
+}

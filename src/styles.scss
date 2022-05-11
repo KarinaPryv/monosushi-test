@@ -1,0 +1,47 @@
+@import './app/shared/styles/variables';
+@import './app/shared/styles/mixins';
+
+@font-face {
+    font-family: Rotunda;
+    src: url(./assets/fonts/rotondac.otf);
+}
+
+@font-face {
+    font-family: RotundaBold;
+    src: url(./assets/fonts/RotondaBoldRegular.ttf);
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rotunda;
+    color: $text-primary-color;
+}
+
+a {
+    text-decoration: none;
+    color: $text-primary-color;
+}
+
+.fw-bold {
+    font-family: RotundaBold;
+}
+
+ol, ul {
+    padding: 0;
+    list-style: none;
+}
+
+.title {
+    padding: 60px 0;
+    @include flex-center;
+
+    h2 {
+        margin: 0;
+        border-top: 4px solid $main-color;
+        padding-top: 10px;
+        font-size: 42px;
+        letter-spacing: 1px;
+    }
+}

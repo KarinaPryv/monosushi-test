@@ -1,0 +1,24 @@
+<div class="container-fluid d-flex">
+    <div class="me-4">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="[ 'discounts' ]" routerLinkActive="active">Акції</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="[ 'categories' ]" routerLinkActive="active">Категорії</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="[ 'articles' ]" routerLinkActive="active">Товари</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="[ 'order' ]" routerLinkActive="active">Замовлення</a>
+            </li>
+        </ul>
+        <div class="btn-box">
+            <button class="btn">ВИХІД</button>
+        </div>
+    </div>
+    <div class="w-100 ms-4">
+        <router-outlet></router-outlet>
+    </div>
+</div>

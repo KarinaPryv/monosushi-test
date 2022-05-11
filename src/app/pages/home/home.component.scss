@@ -1,0 +1,32 @@
+@import '../../shared/styles/variables';
+
+.banner {
+    height: 600px;
+    background-image: url("https://monosushi.com.ua/wp-content/uploads/2020/10/banner-img-1-1920x650.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .banner-info {
+        max-width: 625px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 42px;
+        line-height: 1.2em;
+    }
+
+    p {
+        color: #fff;
+        margin-bottom: 27px;
+        opacity: 0.75;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+}
+
+.color-blue {
+    color: $main-color;
+}
