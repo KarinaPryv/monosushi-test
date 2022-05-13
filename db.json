@@ -1,20 +1,28 @@
 {
   "discounts": [
     {
-      "name": "Кожен п'ятий рол в подарунок",
-      "title": "4+1=4",
-      "description": "Замовляйте 5 ролів, а платіть за 4.\nЗамовляйте 10 ролів, а платіть за 8 і так далі.\nБезкоштовним вважається рол з найменшою вартістю.\nЦя акція не поєднується з іншими акціями.",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2F5-j-v-podarunok.png?alt=media&token=089fe1ec-ce2b-4875-b2fb-3cb4da967e25",
+      "name": "РОЛ ТИЖНЯ",
+      "title": "50% знижки на \"Рол тижня\"",
+      "description": "Щотижня діє знижка 50% на один з ролів у нашому меню.\n“Рол тижня” ви можете знайти на головній сторінці нашого сайту.\nЗнижка діє при мінімальній сумі замовлення 200 грн.\nЦя акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Frol-tyzhnya.png?alt=media&token=29117079-1008-4d78-b407-b1e17bd54ae3",
       "id": 1
+    },
+    {
+      "name": "КОЖЕН П'ЯТИЙ РОЛ В ПОДАРУНОК ",
+      "title": "\"4+1=4\"",
+      "description": "Замовляйте 5 ролів, а платіть за 4.\nЗамовляйте 10 ролів, а платіть за 8 і так далі.\nБезкоштовним вважається рол з найменшою вартістю.\nЦя акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2F5-j-v-podarunok.png?alt=media&token=2053b90b-884c-43bf-8a61-39993806df4e",
+      "id": 2
+    },
+    {
+      "name": "САМОВИВІЗ",
+      "title": "Самовивіз",
+      "description": "Забирайте своє замовлення самостійно та отримуйте такі переваги:\n\nЗапечені моно макі з лососем у подарунок.\nВідсутність мінімальної суми замовлення.\nЧас очікування на замовлення до 30 хв.\nДля отримання акційного ролу у подарунок зберігається умова мінімальної суми замовлення 200 грн.\nЦя акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fsamovyviz.jpg?alt=media&token=26ff0855-6e23-4196-b7ee-925294d350f7",
+      "id": 3
     }
   ],
   "categories": [
-    {
-      "name": "Роли",
-      "path": "roli",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=0642f5f5-19a1-4d27-b19d-0f7ed16577aa",
-      "id": 1
-    },
     {
       "name": "Акції",
       "path": "discounts",
@@ -22,10 +30,28 @@
       "id": 2
     },
     {
+      "name": "Роли",
+      "path": "roli",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=f974c4a6-1652-4779-af82-e120bc53dffe",
+      "id": 3
+    },
+    {
       "name": "Сети",
       "path": "setu",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-sets.svg?alt=media&token=b4b29ec2-c12e-492d-bfaf-5c2f041dd816",
-      "id": 3
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-sets.svg?alt=media&token=78a8627a-d803-4d80-a5cd-37e781249705",
+      "id": 4
+    },
+    {
+      "name": "Напої",
+      "path": "napoyi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-drinks.svg?alt=media&token=ef4cf342-bb91-40d0-ac1b-7c42f67e265c",
+      "id": 5
+    },
+    {
+      "name": "Соуси",
+      "path": " sousi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-sousi.svg?alt=media&token=1077043a-6bc7-4f2b-923e-90876c5e63be",
+      "id": 6
     }
   ]
 }
