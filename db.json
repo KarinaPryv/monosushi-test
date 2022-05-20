@@ -24,12 +24,6 @@
   ],
   "categories": [
     {
-      "name": "Акції",
-      "path": "discounts",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-gift.svg?alt=media&token=583f673d-d824-4744-b79f-4cf360b38792",
-      "id": 2
-    },
-    {
       "name": "Роли",
       "path": "roli",
       "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=f974c4a6-1652-4779-af82-e120bc53dffe",
@@ -52,6 +46,40 @@
       "path": " sousi",
       "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-sousi.svg?alt=media&token=1077043a-6bc7-4f2b-923e-90876c5e63be",
       "id": 6
+    }
+  ],
+  "products": [
+    {
+      "category": {
+        "name": "Роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=f974c4a6-1652-4779-af82-e120bc53dffe",
+        "id": 3
+      },
+      "name": "Філадельфія з лососем",
+      "path": "filadelfiya-z-lososem",
+      "ingridients": "Риc, крем сир, огірок, лосось",
+      "weight": 280,
+      "price": 184,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2F1.-filadelfiya-z-lososem.jpg?alt=media&token=00c83061-5404-4cb2-97d0-b7955cdad75d",
+      "count": null,
+      "id": 1
+    },
+    {
+      "category": {
+        "name": "Роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=f974c4a6-1652-4779-af82-e120bc53dffe",
+        "id": 3
+      },
+      "name": "Філадельфія в кунжуті",
+      "path": "filadelfiya-v-kunzhuti",
+      "ingridients": "Рис, крем сир, огірок, лосось, кунжут",
+      "weight": 240,
+      "price": 164,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-2c9d2.appspot.com/o/images%2F2.-filadelfiya-v-kunzhuti.jpg.pagespeed.ce.OnHk5blNMI.jpg?alt=media&token=d30d5c59-27bd-44fb-b8da-e38bf8c4b290",
+      "count": 1,
+      "id": 2
     }
   ]
 }

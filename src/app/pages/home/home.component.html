@@ -41,30 +41,63 @@
         </div>
     </div>
 </div>
-<section class="container-fluid">
-    <div class="categories-menu justify-content-center">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#home">Всі</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#menu1">Філадельфія</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Каліфорнія</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Запечені</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Фірмові</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Макі</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Преміум</a>
-            </li>
-        </ul>
-    </div>
-</section>
+<div class="container-fluid">
+    <section>
+        <div class="categories-menu justify-content-center">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#home">Всі</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu1">Філадельфія</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu2">Каліфорнія</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu2">Запечені</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu2">Фірмові</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu2">Макі</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu2">Преміум</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="row container-fluid products-wrapper">
+        <div class="col-xl-3 col-lg-4 col-sm-6 product-block" *ngFor="let product of products">
+            <div class="product-image-block">
+                <a href="">
+                    <img [src]="product.imagePath" alt="">
+                </a>
+            </div>
+            <div class="product-title">
+                <h5 class="text-center">
+                    <a href="" class="fw-bold">{{ product.name }}</a>
+                </h5>
+            </div>
+            <div class="product-info d-flex w-100 justify-content-between">
+                <p>{{product.ingridients}}</p>
+                <div class="product-weight">
+                    <span class="fw-bold">{{ product.weight }}</span> г
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="product-price">
+                    <span class="fw-bold">{{ product.price }}</span> грн
+                </div>
+                <div class="price-input">
+                    <button>-</button>
+                    <input value="1" readonly class="fw-bold">
+                    <button>+</button>
+                </div>
+                <button class="button button-primary btn-order">ЗАМОВИТИ</button>
+            </div>
+        </div>
+    </section>
+</div>

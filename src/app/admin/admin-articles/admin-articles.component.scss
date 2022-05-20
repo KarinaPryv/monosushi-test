@@ -1,0 +1,26 @@
+@import '../admin-discounts/admin-discounts.component.scss';
+
+.products-table {
+    th {
+        width: 13.5%;
+        &:first-child {
+            width: 5.5%;
+        }
+    }
+    tr {
+        vertical-align: middle;
+    }
+}
+
+.product-img {
+    width: 130px;
+}
+
+.form-select {
+    height: 40px;
+}
+
+.num-input {
+    width: 49%;
+    height: 60px;
+}

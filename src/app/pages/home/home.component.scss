@@ -2,7 +2,7 @@
 @import '../../shared/styles/mixins';
 
 .banner {
-    height: calc(100vh - 95px);
+    height: calc(100vh - 95px - 185px);
     background-image: url("https://monosushi.com.ua/wp-content/uploads/2020/10/banner-img-1-1920x650.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@
 }
 
 .nav-link {
-    padding-top: 9px;
+    padding: 17px 0;
     font-size: 16px;
     min-width: 168px;
     border: 1px solid #dcdcdc;
@@ -85,7 +85,97 @@
 .nav-link.active {
     border-color: $main-color #dee2e6 #fff;
     border-top: 4px solid $main-color;
-    padding-top: 6px;
+    padding-top: 14px;
+}
+
+.products-wrapper {
+    margin-top: 40px;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.product-block {
+    padding: 15px;
+}
+
+.product-image-block {
+    height: 240px;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.product-info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 60px;
+    margin-bottom: auto;
+
+    p {
+        margin: 0;
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    .product-weight {
+        padding-left: 15px;
+        min-width: 60px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.6em;
+    }
+}
+
+.product-price {
+    font-size: 20px;
+}
+
+.price-input {
+    align-items: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    color: #252525;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: auto;
+    margin-left: auto;
+
+    button {
+        width: 26px;
+        margin: 2px;
+        font-size: 26px;
+        height: 36px;
+        line-height: 24px;
+        color: $text-secondary-color;
+        background-color: #fff;
+        border-radius: 10px;
+        padding-bottom: 2px;
+        border-style: none;
+    }
+
+    input {
+        max-width: 28px;
+        height: 44px;
+        text-align: center;
+        border-style: none;
+    }
+}
+
+.btn-order {
+    padding: 12px;
+    font-size: 14px;
+    width: 100px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -96,13 +186,34 @@
             max-width: 550px;
         }
     }
+
     .categories-menu {
         display: none;
     }
 }
 
 @media screen and (max-width: 769px) {
+    .banner {
+        height: calc(100vh - 95px);
+    }
+
     .after-banner {
         display: none;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+
+    .row {
+        --bs-gutter-x: 0rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .btn-order {
+        font-size: 12px;
+        padding: 8px;
+        width: 80px;
     }
 }

@@ -23,6 +23,10 @@ header {
     }
 }
 
+.header-logo-sm {
+    display: none;
+}
+
 .category-nav {
     display: flex;
     align-items: center;
@@ -294,4 +298,20 @@ position-relative {
             }
         }
     }
+}
+
+@media screen and (max-width: 769px) {
+    .header-logo-md {
+        display: none;
+    }
+    .header-logo-sm {
+        display: block;
+        max-width: 40px !important;
+    }
+}
+
+@media screen and (max-width: 376px) {
+.header-basket {
+    padding: 0 5px;
+}
 }

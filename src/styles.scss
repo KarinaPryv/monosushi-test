@@ -64,6 +64,7 @@ ol, ul {
     font-family: RotundaBold;
     padding: 16px 22px;
     border-radius: 10px;
+    transition-duration: 0.35s;
     color: #252525;
 }
 
@@ -75,4 +76,7 @@ ol, ul {
 .button-primary {
     border: 2px solid $main-color;
     background: $main-color;
+    &:hover {
+        background-color: #fff;
+    }
 }
