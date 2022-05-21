@@ -30,6 +30,10 @@ export class AdminDiscountsComponent implements OnInit {
     this.initDiscountsForm();
   }
 
+  ngDoCheck(): void {
+    this.uploadPercent = this.imagesStorageService.uploadPercent;
+  }
+
   getDiscounts(): void {
     this.discountService.getAll().subscribe(discounts => {
       this.adminDiscounts = discounts;
