@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { DiscountsComponent } from './pages/discounts/discounts.component';
+import { DiscountInfoComponent } from './pages/discount-info/discount-info.component';
 import { ProductCategoryComponent } from './pages/product-category/product-category.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
@@ -17,6 +18,7 @@ import { AdminArticlesComponent } from './admin/admin-articles/admin-articles.co
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'discounts', component: DiscountsComponent },
+  { path: 'discount/:id', component: DiscountInfoComponent },
   { path: 'product-category/:category', component: ProductCategoryComponent },
   { path: 'delivery', component: DeliveryComponent },
   { path: 'about-us', component: AboutUsComponent },

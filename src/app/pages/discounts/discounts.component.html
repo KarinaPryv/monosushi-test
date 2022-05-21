@@ -7,9 +7,9 @@
             <div class="discount-img">
                 <img [src]="discount.imagePath" alt="">
             </div>
-            <h5 class="discount-title fw-bold text-center">{{ discount.title }}</h5>
+            <h5 class="discount-title fw-bold text-center">{{ discount.name }}</h5>
             <hr>
-            <button class="button button-primary discount-button">дізнатись більше</button>
+            <a class="button button-primary discount-button" [routerLink]="[ '/discount', discount.id ]">дізнатись більше</a>
         </div>
     </div>
 </div>

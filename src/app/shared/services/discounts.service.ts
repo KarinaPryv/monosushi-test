@@ -17,6 +17,10 @@ export class DiscountsService {
     return this.http.get<DiscountResponseModel[]>(this.api.discounts);
   }
 
+  getOne(id: number): Observable<DiscountResponseModel> {
+    return this.http.get<DiscountResponseModel>(`${this.api.discounts}/${id}`);
+  }
+
   create(discount: DiscountRequestModel): Observable<DiscountResponseModel> {
     return this.http.post<DiscountResponseModel>(this.api.discounts, discount);
   }

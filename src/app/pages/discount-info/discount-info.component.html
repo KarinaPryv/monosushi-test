@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+      <div class="col-xl-7 col-lg-10 col-12 discount-info-block">
+          <div class="discount-banner">
+              <h2 class="fw-bold">{{ discount?.title }}</h2>
+          </div>
+          <ul class="circle-list">
+              <li *ngFor="let thesis of descriptionThese">{{ thesis }}</li>
+          </ul>
+      </div>
+  </div>
+</div>

@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BottomMenuComponent } from './components/bottom-menu/bottom-menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DiscountsComponent } from './pages/discounts/discounts.component';
+import { DiscountInfoComponent } from './pages/discount-info/discount-info.component';
 import { ProductCategoryComponent } from './pages/product-category/product-category.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
@@ -33,6 +34,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     BottomMenuComponent,
     HomeComponent,
     DiscountsComponent,
+    DiscountInfoComponent,
     ProductCategoryComponent,
     DeliveryComponent,
     AboutUsComponent,
