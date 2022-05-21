@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DiscountResponseModel } from 'src/app/shared/models/discount.model';
 import { DiscountsService } from 'src/app/shared/services/discounts.service';
-import { deleteObject, getDownloadURL, percentage, ref, Storage, uploadBytesResumable } from '@angular/fire/storage';
+import { ImagesStorageService } from 'src/app/shared/services/images-storage.service';
 
 @Component({
   selector: 'app-admin-discounts',
@@ -22,7 +22,7 @@ export class AdminDiscountsComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private discountService: DiscountsService,
-    private storage: Storage
+    private imagesStorageService: ImagesStorageService
   ) { }
 
   ngOnInit(): void {
@@ -87,7 +87,7 @@ export class AdminDiscountsComponent implements OnInit {
 
   upload(event: any): void {
     const file = event.target.files[0];
-    this.uploadFile('images', file.name, file)
+    this.imagesStorageService.uploadFile('images', file.name, file)
       .then(data => {
         this.discountsForm.patchValue({
           imagePath: data
@@ -99,40 +99,18 @@ export class AdminDiscountsComponent implements OnInit {
       })
   }
 
-  async uploadFile(folder: string, name: string, file: File | null): Promise<string> {
-    const path = `${folder}/${name}`;
-    let url = '';
-    if(file) {
-      try {
-        const storageRef = ref(this.storage, path);
-        const task = uploadBytesResumable(storageRef, file);
-        percentage(task).subscribe(data => {
-          this.uploadPercent = data.progress
-        });
-        await task;
-        url = await getDownloadURL(storageRef);
-      } catch (e: any) {
-        console.error(e);
-      }
-    } else {
-      console.log('wrong format');
-    }
-    return Promise.resolve(url);
-  }
-
-  valueByControl(control: string): string {
-    return this.discountsForm.get(control)?.value;
-  }
-
   deleteImage(): void {
-    const task = ref(this.storage, this.valueByControl('imagePath'));
-    deleteObject(task).then(() => {
+    this.imagesStorageService.deleteUploadFile(this.valueByControl('imagePath')).then(() => {
       this.isUploaded = false;
       this.uploadPercent = 0;
       this.discountsForm.patchValue({
         imagePath: null
-      });
-    });
+      })
+    })
+  }
+
+  valueByControl(control: string): string {
+    return this.discountsForm.get(control)?.value;
   }
 
 }

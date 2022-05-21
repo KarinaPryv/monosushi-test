@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CategoryResponseModel } from 'src/app/shared/models/category.model';
 import { CategoriesService } from 'src/app/shared/services/categories.service';
-import { deleteObject, getDownloadURL, percentage, ref, Storage, uploadBytesResumable } from '@angular/fire/storage';
+import { ImagesStorageService } from 'src/app/shared/services/images-storage.service';
 
 @Component({
   selector: 'app-admin-categories',
@@ -22,12 +22,16 @@ export class AdminCategoriesComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private categoriesService: CategoriesService,
-    private storage: Storage
+    private imagesStorageService: ImagesStorageService
   ) { }
 
   ngOnInit(): void {
     this.getCategories();
     this.initCategoriesForm();
+  }
+
+  ngDoCheck(): void {
+    this.uploadPercent = this.imagesStorageService.uploadPercent;
   }
 
   getCategories(): void {
@@ -85,7 +89,7 @@ export class AdminCategoriesComponent implements OnInit {
 
   upload(event: any): void {
     const file = event.target.files[0];
-    this.uploadFile('images', file.name, file)
+    this.imagesStorageService.uploadFile('images', file.name, file)
       .then(data => {
         this.categoriesForm.patchValue({
           imagePath: data
@@ -97,40 +101,18 @@ export class AdminCategoriesComponent implements OnInit {
       })
   }
 
-  async uploadFile(folder: string, name: string, file: File | null): Promise<string> {
-    const path = `${folder}/${name}`;
-    let url = '';
-    if (file) {
-      try {
-        const storageRef = ref(this.storage, path);
-        const task = uploadBytesResumable(storageRef, file);
-        percentage(task).subscribe(data => {
-          this.uploadPercent = data.progress
-        });
-        await task;
-        url = await getDownloadURL(storageRef);
-      } catch (e: any) {
-        console.error(e);
-      }
-    } else {
-      console.log('wrong format');
-    }
-    return Promise.resolve(url);
-  }
-
-  valueByControl(control: string): string {
-    return this.categoriesForm.get(control)?.value;
-  }
-
   deleteImage(): void {
-    const task = ref(this.storage, this.valueByControl('imagePath'));
-    deleteObject(task).then(() => {
+    this.imagesStorageService.deleteUploadFile(this.valueByControl('imagePath')).then(() => {
       this.isUploaded = false;
       this.uploadPercent = 0;
       this.categoriesForm.patchValue({
         imagePath: null
-      });
-    });
+      })
+    })
+  }
+
+  valueByControl(control: string): string {
+    return this.categoriesForm.get(control)?.value;
   }
 
 }
